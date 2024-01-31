@@ -1,0 +1,10 @@
+[package]
+name = "mulaw-encoder"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "mulaw_encoder"
+path = "src/lib.rs"
+
+[dependencies]
