@@ -1,10 +1,7 @@
 use std::fs::File;
 use std::io::{Read, Write};
 
-use law_encoder::{
-    formats::{InputFormat, OutputFormat},
-    LawEncoder,
-};
+use law_encoder::{InputFormat, LawEncoder, OutputFormat};
 
 fn main() {
     let mut file = File::open("audio.raw").unwrap();

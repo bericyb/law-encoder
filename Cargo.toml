@@ -2,6 +2,12 @@
 name = "law_encoder"
 version = "0.1.0"
 edition = "2021"
+authors = ["Beric Bearnson <bericb@gmail.com>"]
+description = "A library for encoding 16bit PCM to telephony formats a-law and mu-law.""
+repository = ""
+keywords = ["audio", "encoding", "alaw", "mulaw", "telephony"]
+categories = ["encoding", "multimedia::audio"]
+exclude = ["audio.raw", "examples/"]
 
 [lib]
 name = "law_encoder"

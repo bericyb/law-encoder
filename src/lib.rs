@@ -1,5 +1,5 @@
-use errors::EncodeError;
-use formats::{InputFormat, OutputFormat};
+pub use crate::errors::EncodeError;
+pub use crate::formats::{InputFormat, OutputFormat};
 
 mod encoder;
 pub mod errors;
@@ -50,6 +50,18 @@ mod tests {
             )
             .unwrap();
         assert_eq!(num_encoded, 5);
+
+        let empty = [0; 0];
+
+        let num_encoded = encoder
+            .encode(
+                InputFormat::BigEndian,
+                &empty,
+                OutputFormat::Mulaw,
+                &mut output,
+            )
+            .unwrap();
+        assert_eq!(num_encoded, 0);
     }
 
     #[test]
