@@ -1,6 +1,6 @@
 # law-encoder
 
-⚖️👨‍⚖️ `️‍️law-encoder` is a Rust library for A-law and μ-law (mu-law) audio encoding. These encoding schemes are defined in ITU-T standards G.711 and are widely used in digital audio processing, particularly in telephony and audio compression.
+⚖️`️‍️law-encoder`👨‍⚖ is a Rust library for A-law and μ-law (mu-law) audio encoding. These encoding schemes are defined in ITU-T standards G.711 and are widely used in digital audio processing, particularly in telephony and audio compression.
 
 ## Features
 
