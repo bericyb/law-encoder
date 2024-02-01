@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "mulaw-encoder"
+name = "law_encoder"
 version = "0.1.0"

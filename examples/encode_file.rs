@@ -1,19 +1,28 @@
 use std::fs::File;
 use std::io::{Read, Write};
 
-use mulaw_encoder::input_format::InputFormat;
+use law_encoder::{
+    formats::{InputFormat, OutputFormat},
+    LawEncoder,
+};
 
 fn main() {
     let mut file = File::open("audio.raw").unwrap();
     let mut audio = Vec::new();
     file.read_to_end(&mut audio).unwrap();
 
-    let encoder = mulaw_encoder::MulawEncoder {};
+    let encoder = LawEncoder {};
 
-    let input_format = InputFormat::LittleEndian;
     let mut output = [0; 150000];
 
-    let num_bytes_encoded = encoder.encode(input_format, &audio, &mut output).unwrap();
+    let num_bytes_encoded = encoder
+        .encode(
+            InputFormat::BigEndian,
+            &audio,
+            OutputFormat::Mulaw,
+            &mut output,
+        )
+        .unwrap();
 
     println!("Encoded {} bytes!", num_bytes_encoded);
 
