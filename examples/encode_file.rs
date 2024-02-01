@@ -8,7 +8,7 @@ fn main() {
     let mut audio = Vec::new();
     file.read_to_end(&mut audio).unwrap();
 
-    let encoder = LawEncoder {};
+    let encoder = LawEncoder;
 
     let mut output = [0; 150000];
 

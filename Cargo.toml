@@ -1,12 +1,12 @@
 [package]
-name = "law_encoder"
+name = "law-encoder"
 version = "0.1.0"
 edition = "2021"
 authors = ["Beric Bearnson <bericb@gmail.com>"]
-description = "A library for encoding 16bit PCM to telephony formats a-law and mu-law.""
+description = "A library for encoding 16bit PCM to a-law and mu-law."
 repository = ""
-keywords = ["audio", "encoding", "alaw", "mulaw", "telephony"]
-categories = ["encoding", "multimedia::audio"]
+keywords = ["audio", "encoding", "alaw", "mulaw", "no_std"]
+categories = ["encoding", "multimedia::audio", "no-std"]
 exclude = ["audio.raw", "examples/"]
 
 [lib]

@@ -1,4 +1,4 @@
-use std::fmt;
+use core::fmt;
 
 #[derive(Debug)]
 pub enum EncodeError {
@@ -15,5 +15,3 @@ impl fmt::Display for EncodeError {
         }
     }
 }
-
-impl std::error::Error for EncodeError {}

@@ -1,3 +1,5 @@
+#![no_std]
+
 pub use crate::errors::EncodeError;
 pub use crate::formats::{InputFormat, OutputFormat};
 

@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "law_encoder"
+name = "law-encoder"
 version = "0.1.0"
