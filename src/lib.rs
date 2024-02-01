@@ -10,6 +10,33 @@ pub mod formats;
 pub struct LawEncoder;
 
 impl LawEncoder {
+    ///Encodes audio data from one format to another, writing the encoded data into the provided output buffer.
+    ///
+    ///#### Parameters:
+    ///
+    ///- `input_format`: An `InputFormat` enum specifying the format of the input data.
+    ///- `input_data`: A slice of `u8` representing the audio data to be encoded. This data should conform to the format specified by `input_format`.
+    ///- `output_format`: An `OutputFormat` enum specifying the desired format of the output data.
+    ///- `output_buffer`: A mutable slice of `u8` where the encoded data will be stored. The buffer must be large enough to hold the encoded data; otherwise, an error is returned.
+    ///#### Returns:
+    ///- A `Result<usize, EncodeError>` indicating the outcome of the encoding operation. On success, it returns `Ok(num_bytes)`, where `num_bytes` is the number of bytes written to `output_buffer`. On failure, it returns `Err(EncodeError)`, indicating the nature of the error.
+    ///#### Errors:
+    ///- `EncodeError::OutputBufferTooSmall`: This error indicates that the provided `output_buffer` is not large enough to contain the encoded data. The size of the output buffer must be at least half the size of the input data, reflecting the specific encoding algorithm's requirements.
+    ///#### Example Usage:
+    ///```rust
+    ///use law_encoder::{InputFormat, OutputFormat, LawEncoder};
+    ///let input_data = vec![/* input data bytes */];
+    ///let mut output_buffer = vec![0u8; /* appropriate size */ 12];
+    ///let encoder = LawEncoder;
+    ///match encoder.encode(InputFormat::BigEndian, &input_data, OutputFormat::Alaw, &mut output_buffer) {
+    ///    Ok(num_bytes) => println!("Encoded {} bytes successfully.", num_bytes),
+    ///    Err(e) => println!("Encoding failed: {:?}", e),
+    ///}
+    ///```
+    ///
+    ///#### Notes:
+    ///
+    ///- The exact size requirement for `output_buffer` may vary depending on the input and output formats. It is generally recommended to allocate the output buffer with at least half the size of the input data to accommodate the encoded data.
     pub fn encode(
         &self,
         input_format: InputFormat,

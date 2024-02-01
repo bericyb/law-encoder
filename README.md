@@ -16,7 +16,7 @@ Add `law-encoder` to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-law_encoding = "0.1.0"
+law_encoder = "0.1.0"
 ```
 
 ### Usage
