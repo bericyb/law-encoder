@@ -1,5 +1,7 @@
 # law-encoder
 
+![tests status](https://github.com/bericyb/law-encoder/actions/workflows/tests.yml/badge.svg)
+
 ⚖️`️‍️law-encoder`👨‍⚖ is a Rust library for A-law and μ-law (mu-law) audio encoding. These encoding schemes are defined in ITU-T standards G.711 and are widely used in digital audio processing, particularly in telephony and audio compression.
 
 ## Features
