@@ -7,7 +7,7 @@ description = "A library for encoding 16bit PCM to a-law and mu-law."
 repository = ""
 keywords = ["audio", "encoding", "alaw", "mulaw", "no_std"]
 categories = ["encoding", "multimedia::audio", "no-std"]
-exclude = ["audio.raw", "examples/"]
+exclude = ["audio.raw", "examples/", ".github/"]
 
 [lib]
 name = "law_encoder"

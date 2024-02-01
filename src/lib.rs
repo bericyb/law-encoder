@@ -6,7 +6,6 @@ pub use crate::formats::{InputFormat, OutputFormat};
 mod encoder;
 pub mod errors;
 pub mod formats;
-mod utils;
 
 pub struct LawEncoder;
 
