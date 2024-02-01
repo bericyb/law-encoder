@@ -9,7 +9,6 @@ keywords = ["audio", "encoding", "alaw", "mulaw", "no_std"]
 categories = ["encoding", "multimedia::audio", "no-std"]
 exclude = ["audio.raw", "examples/", ".github/"]
 license = "MIT"
-license-file = "LICENSE"
 
 [lib]
 name = "law_encoder"
